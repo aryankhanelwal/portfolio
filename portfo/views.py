@@ -1,4 +1,3 @@
-from tkinter import E
 from django.shortcuts import render,redirect
 from .models import contact_me,Post
 from .forms import insertdata
@@ -55,7 +54,7 @@ def postdetai(request ):
 
 def post_Detail(request, slug):
     post= get_object_or_404(Post, slug=slug)
-    context = {'post': Post}
+    context = {'post': post}
     # return HttpResponse(f"You are viewing {slug}")
     return render(request, 'post_details.html',context)
 
