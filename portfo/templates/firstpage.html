@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="portfolio.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel&display=swap" rel="stylesheet">
+  <title>My first portfolio</title>
+  <style>
+    * {
+      box-sizing: border-box;
+
+      padding: 0%;
+    }
+
+    .ani {
+
+      position: relative;
+      animation: myfirst 9s;
+      animation-direction: alternative;
+
+    }
+
+    #fit {
+      text-align: center;
+      color: white;
+      font-size: 2.3em;
+      margin-top: 143px;
+      /* font-family: 'Gwendolyn', cursive; */
+
+    }
+
+    #special {
+      font-family: 'Gwendolyn', serif;
+      font-size: 2.3em;
+    }
+
+    span {
+      color: #26a390;
+      font-size: 0.5em;
+    }
+
+    @keyframes myfirst {
+      0% {
+        left: 400px;
+        top: 0px;
+      }
+
+      25% {
+        left: 0px;
+        top: 0px;
+      }
+
+    }
+
+    .gui {
+      display: grid;
+      justify-content: center;
+      margin: auto;
+
+    }
+
+    .flex-container {
+      display: flex;
+      justify-content: center;
+
+    }
+
+    .flex-container>div {
+
+      margin: 10px;
+      padding: 20px;
+      font-size: 30px;
+    }
+
+
+
+
+
+    img {
+      height: 50px;
+      border-radius: 28%;
+      margin-left: 36px;
+    }
+
+    a>img:hover {
+      height: 52px;
+    }
+
+    .jumbotron {
+      background-color: rgba(8, 13, 14, 0.856);
+      width: 99%;
+      border: 1px solid;
+
+      display: grid;
+      grid-template-columns: auto auto;
+      overflow: auto;
+      text-align: right;
+
+    }
+    .jumbotron2 {
+      background-color: rgba(0, 0, 0, 0.856);
+      width: 99%;
+      border: 1px solid;
+
+      display: grid;
+      grid-template-columns: auto auto;
+      overflow: auto;
+
+
+    }
+
+    .jumbotron h3 {
+      font-family: 'Gwendolyn', serif;
+      color: #ffffff;
+      align-items: center;
+      text-align: center;
+      font-size: 2.8em;
+    }
+    .jumbotron2 h3 {
+      font-family: 'Gwendolyn', serif;
+      color: #ffffff;
+      align-items: center;
+      text-align: center;
+      font-size: 2.8em;
+    }
+    .s{
+      padding-left: 15px;
+    }
+    .s h4{
+      color: white;
+      font-size: 1.8em;
+    }
+  </style>
+</head>
+{% include "navbar.html" %}
+
+<body>
+  <div class="ani">
+    <div class="gui">
+      <p id="fit">Hello <br><span id="special">Myself Aryan a Web Developer</span></p>
+
+    </div>
+    <div class="flex-container">
+      <a href="https://github.com/aryankhanelwal" target="_blank"><img
+          src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/91/Octicons-mark-github.svg/2048px-Octicons-mark-github.svg.png"></a>
+      <a href="https://www.linkedin.com/in/aryan-khandelwal-897b241b9/" target="_blank"><img
+          src="https://1000logos.net/wp-content/uploads/2017/03/Linkedin-Logo.png"></a>
+      <a href="https://twitter.com/aryan_aryyyan" target="_blank"><img
+          src="https://help.twitter.com/content/dam/help-twitter/brand/logo.png"></a>
+      <a href="https://github.com/aryankhanelwal" target="_blank"><img
+          src="https://upload.wikimedia.org/wikipedia/en/thumb/7/7b/Codechef%28new%29_logo.svg/1200px-Codechef%28new%29_logo.svg.png"></a>
+
+    </div>
+  </div>
+  <br><br> <br><br> <br><br> <br><br> <br><br><br><br>
+  <!--Youtube-->
+  <div class="jumbotron">
+    <h3>You Can <br>Also Find <br>Me on <br>Youtube</h3>
+
+    <h3><iframe width="424" height="238" src="https://www.youtube.com/embed/XyX7aPrU4DI"
+        title="Despacito - Luis Fonsi, Daddy Yankee ft. Justin Bieber - Electric Guitar Cover      By : Aryan"
+        frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        allowfullscreen></iframe></h3>
+  </div>
+  <!--Twitter-->
+  <div class="jumbotron2">
+
+<div class="f">
+    <h3>
+      <blockquote class="twitter-tweet">
+        <p lang="en" dir="ltr">“Be active! Take on responsibility! Work for the things you believe in. If you do not,
+          you are surrendering your fate to others.” - Dr. APJ Abdul Kalam</p>&mdash; Aryan khandelwal (@aryan_aryyyan)
+        <a href="https://twitter.com/aryan_aryyyan/status/1472486393213452289?ref_src=twsrc%5Etfw">December 19, 2021</a>
+      </blockquote>
+      <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+      
+    </h3>
+  </div>
+  <div class="s">
+    <h3>More about me </h3>
+    <h4>
+      I build new projects just to tickle my brain and love teaching others how they're made.<br>
+
+     
+    </h4>
+  </div>
+</div>
+</body>
+
+</html>

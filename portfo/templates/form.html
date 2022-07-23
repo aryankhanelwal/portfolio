@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+    {% load static %}
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>contact me</title>
+</head>
+<style>
+body{
+    margin: 0;
+   
+  width: 100%;
+   height: 100%;
+
+}
+* {box-sizing: border-box}
+form{
+    color: white;
+   
+}
+input[type=email]:focus, input[type=password]:focus {
+  background-color: #ddd;
+  outline: none;
+}
+input[type=text], input[type=password],input[type=email] {
+  width: 100%;
+  padding: 15px;
+  margin: 5px 0 22px 0;
+  display: inline-block;
+  border: none;
+  background: #f1f1f1;
+}
+.container{
+    font: 1em sans-serif;
+    display:grid;
+    height: 765px;
+    border: black 5px;
+    justify-content: center;
+    align-content: center;
+     border-radius: 51px;
+    margin: 50px 420px;
+    
+}
+button {
+  background-color: #04AA6D;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  opacity: 0.9;
+}
+button:hover {
+  opacity:1;
+}
+h1{
+  text-align: center;
+  color: rgb(105, 152, 170);
+  animation: jump 5s ;
+  animation-direction: alternate;
+  position: relative;
+}
+@keyframes jump {
+  0%   { opacity: 0;
+  }
+}
+.back{
+height: 79px;
+display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+textarea{
+  background-color: #f1f1f1;
+  width: 100%;
+}
+    </style>
+<body>
+    {% include "navbar.html" %}
+    <h1><i>Feel free to reach me </i></h1>
+    <div class="container">
+      <img src="{%static 'back.png'%}" class="back">
+        <form  method="POST" autocomplete="off">
+
+            {% csrf_token %}
+            {{form.as_p}}
+          
+            <button type="submit">SUBMIT </button>
+        </form>
+        </div>
+</body>
+</html>

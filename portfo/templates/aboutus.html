@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AboutMe</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Libre+Franklin:ital,wght@1,100&display=swap" rel="stylesheet"></head>
+<style>
+    h1 {
+        text-align: center;
+        /* color: rgb(12, 134, 182); */
+        color: rgb(105, 152, 170);
+        text-decoration: underline;
+    }
+
+    .flex-cont {
+        display: flex;
+        color: #ffffff;
+    }
+
+    img {
+        height: 251px;
+    }
+
+    p {
+
+        font-size: 28px;
+        margin-left: 50px;
+        font-family: 'Bebas Neue', cursive;
+    }
+
+    .resume {
+        font-size: 25px;
+        text-decoration: none;
+        background-color: rgb(105, 152, 170);
+        border-radius: 30%;
+        margin-left: 38px;
+    }
+    
+
+.resume {
+  align-items: center;
+  background-color: #0A66C2;
+  border: 0;
+  border-radius: 100px;
+  box-sizing: border-box;
+  color: #ffffff;
+  cursor: pointer;
+  display: inline-flex;
+  font-size: 20px;
+  justify-content: center;
+  line-height: 20px;
+  max-width: 480px;
+  min-height: 40px;
+  min-width: 0px;
+  overflow: hidden;
+  padding: 0px;
+  padding-left: 20px;
+  padding-right: 20px;
+  text-align: center;
+ 
+}
+
+.resume:hover,
+.resume:focus { 
+  background-color: #16437E;
+  color: #ffffff;
+}
+
+.resume:active {
+  background: #09223b;
+  color: rgb(255, 255, 255, .7);
+}
+
+.resume:disabled { 
+  cursor: not-allowed;
+  background: rgba(0, 0, 0, .08);
+  color: rgba(0, 0, 0, .3);
+}
+.ex{
+    text-align: center;
+        color: rgb(105, 152, 170);
+        text-decoration: underline;
+}
+li{
+    list-style-type: none;
+}
+#skills{
+    display: flex;
+    list-style-type: none;
+    justify-content: space-evenly;
+margin-bottom: 10px;
+color: rgb(255, 255, 255);
+font-size: 25px;
+font-family: 'Libre Franklin', sans-serif;padding-top: 50px;
+padding-bottom: 50px;
+}
+</style>
+
+<body>
+    {% include "navbar.html" %}
+    <h1>ABOUT ME</h1>
+    <br><br>
+    <div class="flex-cont">
+        <p>My name is Aryan Khandelwal and i am a self-taught web developer. <br>
+            I am currenty pursuing Btech from IT branch.<br>
+            I'm a web developer from in Rajasthan, India<br>
+             MY focus is on the Django, but still exploring other technologies and frameworks
+            that catch my interest! if you're looking for a developer to add to your team, I'd love to hear from you!<br>
+        </p>
+    </div>
+    <button  class="resume"> 
+        <a href="{% static 'Resume.pdf' %}" target="_blank" style="text-decoration: none;color: rgb(203, 224, 224);">Resume</a></button>
+        <h1 class="ex">EXPERTISE</h1>   
+        <div id="skills">
+        
+        <ul>
+            <li>Python</li>
+            <li>Django</li>
+            <li>HTML/CSS</li>
+            <li>Bootstrap</li>
+            <li>Tailwind css</li>
+            </ul><ul>
+            <li>Data Structures and Algorithm</li>
+            <li>C</li>
+            <li>C++</li>
+            <li>MySQL</li>
+            
+        </ul>
+        </ul>
+    </div>
+</body>
+
+</html>

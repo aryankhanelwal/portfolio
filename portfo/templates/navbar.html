@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>document</title>
+</head>
+<style>
+body{
+  /* background: #444857; */
+  font-size: 16px;
+  margin: 0;
+  /* background-image: url( "{% static 'star-sky.jpg' %}");    */
+  width: 100%;
+  background-color: black;
+  
+  height: 100%;
+
+}
+.active:hover{
+  color: lightblue;
+}
+#nav {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  width: 100%;
+  position: sticky;
+}
+
+.nav1 {
+  float: left;
+}
+
+.nav1:last-child {
+  border-right: none;
+}
+
+.nav1 a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 16px 10px;
+  text-decoration: none;
+}
+
+.nav1 a:hover:not(.active) {
+  background-color: #312b3511;
+}
+
+
+
+  
+</style>
+<body>
+    <div class="navbar">
+
+
+      <ul id="nav">
+        <li class="nav1"><a class="active" href="{% url 'firstpage' %}">Home</a></li>
+        <li class="nav1"><a href="{% url 'mywork' %}" class="active">MyWork</a></li>
+        <li class="nav1"><a href="{% url 'contact_me' %}" class="active">ContactMe</a></li>
+        <li class="nav1"><a href="{% url 'blog' %}" class="active">Blog</a></li>
+
+        
+
+        <li style="float:right" class="nav1"><a href="{% url 'aboutus' %}" class="active">About</a></li>
+
+      </ul>
+  </div>
+  {% block content %}
+		
+		
+ {% endblock %}
+</body>
+</html>
