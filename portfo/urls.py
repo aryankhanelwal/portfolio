@@ -1,5 +1,5 @@
 from django.urls import re_path as url
-
+from django.urls import path
 from portfo import views
 urlpatterns = [
 	
@@ -8,7 +8,7 @@ urlpatterns = [
     url(r'^mywork'  , views.mywork, name='mywork'),
     url(r'^aboutus'  , views.aboutus, name='aboutus'),
     url('', views.PostList.as_view(), name='home'),
-    url('<str:slug>/', views.post_Detail, name='post_Detail'),
+    path('<slug:slug>/', views.post_Detail, name='post_Detail'),
     url(r'^index'  , views.index, name='index'),
     url(r'^postdetai'  , views.postdetai, name='postdetai'),
 
