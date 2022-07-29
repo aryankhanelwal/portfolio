@@ -7,15 +7,70 @@
   <link rel="stylesheet" href="portfolio.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cinzel&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel&display=swap" rel="stylesheet"> 
+  
   <title>My first portfolio</title>
   <style>
     * {
       box-sizing: border-box;
-
+      margin: 0%;
       padding: 0%;
     }
-
+    .wrapper{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* min-height: 100vh; */
+  /* background: #343F4F; */
+}
+.wrapper .static-txt{
+  color: #fff;
+  font-size: 60px;
+  font-weight: 400;
+}
+.wrapper .dynamic-txts{
+  margin-left: 15px;
+  height: 90px;
+  line-height: 90px;
+  overflow: hidden;
+}
+.dynamic-txts li{
+  list-style: none;
+  color: #FC6D6D;
+  font-size: 60px;
+  font-weight: 500;
+  position: relative;
+  top: 0;
+  animation: slide 12s steps(4) infinite;
+}
+@keyframes slide {
+  100%{
+    top: -360px;
+  }
+}
+.dynamic-txts li span{
+  position: relative;
+  margin: 5px 0;
+  line-height: 90px;
+}
+.dynamic-txts li span::after{
+  content: "";
+  position: absolute;
+  left: 0;
+  height: 115%;
+  width: 100%;
+  background: black;
+  border-left: 2px solid #FC6D6D;
+  animation: typing 3s steps(10) infinite;
+}
+@keyframes typing {
+  40%, 60%{
+    left: calc(100% + 30px);
+  }
+  100%{
+    left: 0;
+  }
+}
     .ani {
 
       position: relative;
@@ -35,12 +90,13 @@
 
     #special {
       font-family: 'Gwendolyn', serif;
-      font-size: 2.3em;
+      color: rgb(203, 224, 224);
+      font-size: 2.5em;
     }
 
     span {
-      color: #26a390;
-      font-size: 0.5em;
+      
+      font-family: "Poppins", sans-serif;
     }
 
     @keyframes myfirst {
@@ -66,15 +122,20 @@
     .flex-container {
       display: flex;
       justify-content: center;
+      
+      margin-top: 30px;
+
+
 
     }
 
-    .flex-container>div {
+    /* .flex-container>div {
 
-      margin: 10px;
+      margin-left: 10px;
+      margin-top: 25px;
       padding: 20px;
       font-size: 30px;
-    }
+    } */
 
 
 
@@ -90,17 +151,18 @@
       height: 52px;
     }
 
-    .jumbotron {
+    /* .jumbotron {
       background-color: rgba(8, 13, 14, 0.856);
-      width: 99%;
+      width: 40%;
       border: 1px solid;
-
-      display: grid;
-      grid-template-columns: auto auto;
+      border-radius: 16%;
+       display: grid;
+      grid-template-columns: auto auto; 
       overflow: auto;
       text-align: right;
+      margin: auto;
 
-    }
+    } */
     .jumbotron2 {
       background-color: rgba(0, 0, 0, 0.856);
       width: 99%;
@@ -141,9 +203,22 @@
 <body>
   <div class="ani">
     <div class="gui">
-      <p id="fit">Hello <br><span id="special">Myself Aryan a Web Developer</span></p>
+      <p id="fit" > <span id="special">Myself Aryan </span> 
+        <div class="wrapper">
+          <div class="static-txt">I'm a</div>
+          <ul class="dynamic-txts">
+            <li><span>YouTuber</span></li>
+            <li><span>Designer</span></li>
+            <li><span>Developer</span></li>
+            <li><span>Freelancer</span></li>
+          </ul>
+        </div>
+      
+      
+      </p>
 
     </div>
+    <br>
     <div class="flex-container">
       <a href="https://github.com/aryankhanelwal" target="_blank"><img
           src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/91/Octicons-mark-github.svg/2048px-Octicons-mark-github.svg.png"></a>
@@ -156,17 +231,21 @@
 
     </div>
   </div>
-  <br><br> <br><br> <br><br> <br><br> <br><br><br><br>
+  <br><br> <br><br> <br><br> <br><br> 
   <!--Youtube-->
-  <div class="jumbotron">
-    <h3>You Can <br>Also Find <br>Me on <br>Youtube</h3>
+  <!-- <div class="jumbotron">
+    <h3>My Youtube</h3>
 
-    <h3><iframe width="424" height="238" src="https://www.youtube.com/embed/XyX7aPrU4DI"
+    
+<h3><iframe  width="424" height="238" src="https://www.youtube.com/embed/XyX7aPrU4DI"
         title="Despacito - Luis Fonsi, Daddy Yankee ft. Justin Bieber - Electric Guitar Cover      By : Aryan"
         frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
         allowfullscreen></iframe></h3>
-  </div>
+  </div> -->
   <!--Twitter-->
+  <br>
+  <br>
+  <br>
   <div class="jumbotron2">
 
 <div class="f">

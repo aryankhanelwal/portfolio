@@ -45,13 +45,13 @@
     <div class="row">
         <!-- Blog Entries Column -->
         <div class="col-md-8 mt-3 left">
-            {% for post in post_list %}
+            {% for post in posts %}
             <div class="card mb-4">
                 <div class="card-body">
-                    <h2 class="card-title">{{ post.title }}</h2>
+                    <h2 class="card-title" style="margin-left:40% ;">{{ post.title|capfirst }}</h2>
                     <p class="card-text text-muted h6">{{ post.author }} | {{ post.created_on}} </p>
-                    <p class="card-text">{{post.content|slice:":200" }}</p>
-                    <a href="{{post.get_absolute_url}}" class="btn btn-primary">Read More &rarr;</a>
+                    <p class="card-text">{{post.content|slice:":200" }}...</p>
+                    <a href="/{{post.slug}}" class="btn btn-primary">Read More </a>
 
                 </div>
             </div>

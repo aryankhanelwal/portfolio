@@ -15,12 +15,12 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.conf.urls import include
-from django.urls import re_path as url
+from django.urls import path
 from portfo import views
 urlpatterns = [
-    url(r'^$',  views.firstpage,name='firstpage'),
-    url('', include('portfo.urls')),
-    url(r'^admin/',  admin.site.urls),
+     path('',  views.firstpage,name='firstpage'),
+    path('', include('portfo.urls')),
+    path('admin/',  admin.site.urls),
     # url(r'^form'  , views.contact_me, name='contact_me'),
     # url(r'^(?P<slug>[\w-]+)/$', views.post_Detail, name='post_Detail'),
 

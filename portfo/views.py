@@ -1,4 +1,3 @@
-from tkinter import E
 from django.shortcuts import render,redirect
 from .models import contact_me,Post
 from .forms import insertdata
@@ -54,12 +53,16 @@ def postdetai(request ):
 #     template_name = 'post_details.html'
 
 def post_Detail(request, slug):
-    post= get_object_or_404(Post, slug=slug)
-    context = {'post': Post}
+    post= Post.objects.filter(slug=slug).first()
     # return HttpResponse(f"You are viewing {slug}")
-    return render(request, 'post_details.html',context)
+    return render(request, 'post_details.html',{'post':post})
 
-class PostList(generic.ListView):
-    queryset = Post.objects.all().order_by('-created_on')
-    template_name = 'index.html'
+# class PostList(generic.ListView):
+#     queryset = Post.objects.all().order_by('-created_on')
+#     template_name = 'index.html'
+
+def frontpage(request):
+	posts = Post.objects.all()
+
+	return render(request, 'index.html', {'posts': posts})
     

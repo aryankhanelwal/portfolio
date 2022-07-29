@@ -1,18 +1,21 @@
-from django.urls import re_path as url
 
 from portfo import views
+
+from django.urls import path
 urlpatterns = [
 	
-    url(r'^$'  , views.firstpage, name='firstpage'),
-    url(r'^form'  , views.contact_me, name='contact_me'),
-    url(r'^mywork'  , views.mywork, name='mywork'),
-    url(r'^aboutus'  , views.aboutus, name='aboutus'),
-    url('', views.PostList.as_view(), name='home'),
-    url('<str:slug>/', views.post_Detail, name='post_Detail'),
-    url(r'^index'  , views.index, name='index'),
-    url(r'^postdetai'  , views.postdetai, name='postdetai'),
+    path('^$'  , views.firstpage, name='firstpage'),
+    path('form/'  , views.contact_me, name='contact_me'),
+    path('mywork/'  , views.mywork, name='mywork'),
+    path('aboutus/'  , views.aboutus, name='aboutus'),
+    # pat('', views.PostList.as_view(), name='home'),
+    path('frontpage/', views.frontpage, name='frontpage'),
 
-    url(r'^blog'  , views.blog, name='blog'),
+    path('<slug:slug>/', views.post_Detail, name='post_Detail'),
+    path('index/'  , views.index, name='index'),
+    # path('postdetai/'  , views.postdetai, name='postdetai'),
+
+    # path(r'^blog'  , views.blog, name='blog'),
    
 
     
