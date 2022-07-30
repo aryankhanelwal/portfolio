@@ -4,11 +4,10 @@
 
 <head>
   <meta charset="utf-8">
-  <link rel="stylesheet" href="portfolio.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cinzel&display=swap" rel="stylesheet"> 
-  
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel&display=swap" rel="stylesheet">
+
   <title>My first portfolio</title>
   <style>
     * {
@@ -16,61 +15,73 @@
       margin: 0%;
       padding: 0%;
     }
-    .wrapper{
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  /* min-height: 100vh; */
-  /* background: #343F4F; */
-}
-.wrapper .static-txt{
-  color: #fff;
-  font-size: 60px;
-  font-weight: 400;
-}
-.wrapper .dynamic-txts{
-  margin-left: 15px;
-  height: 90px;
-  line-height: 90px;
-  overflow: hidden;
-}
-.dynamic-txts li{
-  list-style: none;
-  color: #FC6D6D;
-  font-size: 60px;
-  font-weight: 500;
-  position: relative;
-  top: 0;
-  animation: slide 12s steps(4) infinite;
-}
-@keyframes slide {
-  100%{
-    top: -360px;
-  }
-}
-.dynamic-txts li span{
-  position: relative;
-  margin: 5px 0;
-  line-height: 90px;
-}
-.dynamic-txts li span::after{
-  content: "";
-  position: absolute;
-  left: 0;
-  height: 115%;
-  width: 100%;
-  background: black;
-  border-left: 2px solid #FC6D6D;
-  animation: typing 3s steps(10) infinite;
-}
-@keyframes typing {
-  40%, 60%{
-    left: calc(100% + 30px);
-  }
-  100%{
-    left: 0;
-  }
-}
+
+    .wrapper {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      /* min-height: 100vh; */
+      /* background: #343F4F; */
+    }
+
+    .wrapper .static-txt {
+      color: #fff;
+      font-size: 60px;
+      font-weight: 400;
+    }
+
+    .wrapper .dynamic-txts {
+      margin-left: 15px;
+      height: 90px;
+      line-height: 90px;
+      overflow: hidden;
+    }
+
+    .dynamic-txts li {
+      list-style: none;
+      color: #FC6D6D;
+      font-size: 60px;
+      font-weight: 500;
+      position: relative;
+      top: 0;
+      animation: slide 12s steps(4) infinite;
+    }
+
+    @keyframes slide {
+      100% {
+        top: -360px;
+      }
+    }
+
+    .dynamic-txts li span {
+      position: relative;
+      margin: 5px 0;
+      line-height: 90px;
+    }
+
+    .dynamic-txts li span::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      height: 115%;
+      width: 100%;
+      background: black;
+      border-left: 2px solid #FC6D6D;
+      animation: typing 3s steps(10) infinite;
+    }
+
+    @keyframes typing {
+
+      40%,
+      60% {
+        left: calc(100% + 30px);
+      }
+
+      100% {
+        left: 0;
+      }
+    }
+
     .ani {
 
       position: relative;
@@ -95,7 +106,7 @@
     }
 
     span {
-      
+
       font-family: "Poppins", sans-serif;
     }
 
@@ -122,7 +133,7 @@
     .flex-container {
       display: flex;
       justify-content: center;
-      
+
       margin-top: 30px;
 
 
@@ -182,6 +193,7 @@
       text-align: center;
       font-size: 2.8em;
     }
+
     .jumbotron2 h3 {
       font-family: 'Gwendolyn', serif;
       color: #ffffff;
@@ -189,10 +201,12 @@
       text-align: center;
       font-size: 2.8em;
     }
-    .s{
+
+    .s {
       padding-left: 15px;
     }
-    .s h4{
+
+    .s h4 {
       color: white;
       font-size: 1.8em;
     }
@@ -201,20 +215,21 @@
 {% include "navbar.html" %}
 
 <body>
-  <div class="ani">
-    <div class="gui">
-      <p id="fit" > <span id="special">Myself Aryan </span> 
-        <div class="wrapper">
-          <div class="static-txt">I'm a</div>
-          <ul class="dynamic-txts">
-            <li><span>YouTuber</span></li>
-            <li><span>Designer</span></li>
-            <li><span>Developer</span></li>
-            <li><span>Freelancer</span></li>
-          </ul>
-        </div>
-      
-      
+
+  <div class="gui">
+    <p id="fit"> <span id="special">Myself Aryan </span>
+    <div class="ani">
+      <div class="wrapper">
+        <div class="static-txt">I'm a</div>
+        <ul class="dynamic-txts">
+          <li><span>YouTuber</span></li>
+          <li><span>Designer</span></li>
+          <li><span>Developer</span></li>
+          <li><span>Freelancer</span></li>
+        </ul>
+      </div>
+
+
       </p>
 
     </div>
@@ -231,7 +246,7 @@
 
     </div>
   </div>
-  <br><br> <br><br> <br><br> <br><br> 
+  
   <!--Youtube-->
   <!-- <div class="jumbotron">
     <h3>My Youtube</h3>
@@ -243,31 +258,33 @@
         allowfullscreen></iframe></h3>
   </div> -->
   <!--Twitter-->
-  <br>
+  <!-- <br>
   <br>
   <br>
   <div class="jumbotron2">
 
-<div class="f">
-    <h3>
-      <blockquote class="twitter-tweet">
-        <p lang="en" dir="ltr">“Be active! Take on responsibility! Work for the things you believe in. If you do not,
-          you are surrendering your fate to others.” - Dr. APJ Abdul Kalam</p>&mdash; Aryan khandelwal (@aryan_aryyyan)
-        <a href="https://twitter.com/aryan_aryyyan/status/1472486393213452289?ref_src=twsrc%5Etfw">December 19, 2021</a>
-      </blockquote>
-      <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
-      
-    </h3>
-  </div>
-  <div class="s">
-    <h3>More about me </h3>
-    <h4>
-      I build new projects just to tickle my brain and love teaching others how they're made.<br>
+    <div class="f">
+      <h3>
+        <blockquote class="twitter-tweet">
+          <p lang="en" dir="ltr">“Be active! Take on responsibility! Work for the things you believe in. If you do not,
+            you are surrendering your fate to others.” - Dr. APJ Abdul Kalam</p>&mdash; Aryan khandelwal
+          (@aryan_aryyyan)
+          <a href="https://twitter.com/aryan_aryyyan/status/1472486393213452289?ref_src=twsrc%5Etfw">December 19,
+            2021</a>
+        </blockquote>
+        <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 
-     
-    </h4>
-  </div>
-</div>
+      </h3>
+    </div>
+    <div class="s">
+      <h3>More about me </h3>
+      <h4>
+        I build new projects just to tickle my brain and love teaching others how they're made.<br>
+
+
+      </h4>
+    </div>
+  </div> -->
 </body>
 
 </html>
