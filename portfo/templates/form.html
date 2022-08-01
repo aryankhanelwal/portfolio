@@ -78,6 +78,16 @@ textarea{
   background-color: #f1f1f1;
   width: 100%;
 }
+@media only screen 
+  and (min-device-width: 375px) 
+  and (max-device-width: 812px) 
+  and (-webkit-min-device-pixel-ratio: 3) { 
+    input[type=email]:focus, input[type=password]:focus {
+      
+    }
+
+}
+
     </style>
 <body>
     {% include "navbar.html" %}

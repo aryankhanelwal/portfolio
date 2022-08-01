@@ -1,3 +1,5 @@
+from distutils.command.upload import upload
+from statistics import mode
 from django.db import models
 from django.utils import timezone
 from django.contrib.auth.models import User
@@ -28,6 +30,7 @@ class Post(models.Model):
     content = models.TextField()
     created_on = models.DateTimeField(default=timezone.now())
     status = models.IntegerField(choices=STATUS, default=0)
+    Img = models.ImageField(null =True, blank = True, upload_to='images')
 
     class Meta:
         ordering = ['-created_on']
