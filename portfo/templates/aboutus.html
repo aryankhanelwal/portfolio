@@ -10,7 +10,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
-    <link rel="apple-touch-icon" sizes="180x180" href="{%static '../static/images/favicon-16x16.png'%}">
+    <link rel="apple-touch-icon" sizes="180x180" href="{%static '../static/images/favicon-32x32.png'%}">
 <link rel="icon" type="image/png" sizes="32x32" href="{%static '../static/images/favicon.ico'%}">
 <link rel="manifest" href="{%static '../static/images/site.webmanifest'%}">
     <link href="https://fonts.googleapis.com/css2?family=Libre+Franklin:ital,wght@1,100&display=swap" rel="stylesheet"></head>
@@ -108,6 +108,9 @@ padding-bottom: 50px;
 
 <body>
     {% include "navbar.html" %}
+    
+    {% block content %}
+
     <h1>ABOUT ME</h1>
     <br><br>
     <div class="flex-cont">
@@ -115,12 +118,13 @@ padding-bottom: 50px;
         <p>My name is Aryan Khandelwal and i am a self-taught web developer. <br>
             I am currenty pursuing Btech from IT branch.<br>
             I'm a web developer from in Rajasthan, India<br>
-             MY focus is on the Django, but still exploring other technologies and frameworks
+            MY focus is on the Django, but still exploring other technologies and frameworks
             that catch my interest! if you're looking for a developer to add to your team, I'd love to hear from you!<br>
+            <button  class="resume"> 
+                <a href="{% static 'Resume.pdf' %}" target="_blank" style="text-decoration: none;color: rgb(203, 224, 224);">Resume</a>
+            </button>
         </p>
     </div>
-    <button  class="resume"> 
-        <a href="{% static 'Resume.pdf' %}" target="_blank" style="text-decoration: none;color: rgb(203, 224, 224);">Resume</a></button>
         <h1 class="ex">EXPERTISE</h1>   
         <div id="skills">
         
@@ -140,5 +144,7 @@ padding-bottom: 50px;
         </ul>
     </div>
 </body>
+{% endblock %}
+{% include "footer.html" %}
 
 </html>

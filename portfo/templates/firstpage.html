@@ -217,7 +217,10 @@
 {% include "navbar.html" %}
 
 <body>
+  {% block content %}
 
+		
+  
   <div class="gui">
     <p id="fit"> <span id="special">Myself Aryan </span>
     <div class="ani">
@@ -286,7 +289,8 @@
 
       </h4>
     </div>
-  </div> -->
+  </div> --><br><br><br><br><br><br>
 </body>
-
+{% endblock %}
+{% include "footer.html" %}
 </html>
