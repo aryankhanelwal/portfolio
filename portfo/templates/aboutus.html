@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AboutMe</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+  <link rel="apple-touch-icon" sizes="180x180" href="{%static '../static/images/favicon-32x32.png'%}">
+  <link rel="icon" type="image/png" sizes="32x32" href="{%static '../static/images/favicon.ico'%}">
+  <link rel="manifest" href="{%static '../static/images/site.webmanifest'%}">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@200&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Libre+Franklin:ital,wght@1,100&display=swap" rel="stylesheet">
+</head>
+<style>
+  h1 {
+    text-align: center;
+    /* color: rgb(12, 134, 182); */
+    color: rgb(105, 152, 170);
+    text-decoration: underline;
+    margin-top: 10px;
+  }
+
+  .flex-cont {
+    display: flex;
+    color: #ffffff;
+    padding-left: 15px;
+  }
+
+  img {
+    height: 230px;
+    border-radius: 10%;
+  }
+
+  p {
+
+    font-size: 21px;
+    margin-top: 0px;
+    margin-left: 15px;
+    font-family: 'Kanit', sans-serif;
+
+
+  }
+
+  /* .resume {
+    font-size: 25px;
+    text-decoration: none;
+    background-color: rgb(174, 198, 207);
+    border-radius: 30%;
+    margin-left: 38px;
+  }
+
+
+  .resume {
+    align-items: center;
+    background-color: #0A66C2;
+    border: 0;
+    border-radius: 100px;
+    box-sizing: border-box;
+    color: #ffffff;
+    cursor: pointer;
+    display: inline-flex;
+    font-size: 20px;
+    justify-content: center;
+    line-height: 20px;
+    max-width: 480px;
+    min-height: 40px;
+    min-width: 0px;
+    overflow: hidden;
+    padding: 0px;
+    padding-left: 20px;
+    padding-right: 20px;
+    text-align: center;
+
+  }
+
+  .resume:hover,
+  .resume:focus {
+    background-color: #16437E;
+    color: #ffffff;
+  }
+
+  .resume:active {
+    background: #09223b;
+    color: rgb(255, 255, 255, .7);
+  }
+
+  .resume:disabled {
+    cursor: not-allowed;
+    background: rgba(0, 0, 0, .08);
+    color: rgba(0, 0, 0, .3);
+  } */
+
+  .ex {
+    text-align: center;
+    color: rgb(105, 152, 170);
+    text-decoration: underline;
+    margin: 0px;
+  }
+
+  li {
+    list-style-type: none;
+  }
+
+  #skills {
+    display: flex;
+    list-style-type: none;
+    justify-content: space-evenly;
+    margin-bottom: 10px;
+    color: rgb(255, 255, 255);
+    font-size: 21px;
+    font-family: 'Kanit', sans-serif;
+    padding-top: 50px;
+    padding-bottom: 50px;
+  }
+
+  @media (max-width: 500px) {
+    img {
+      height: 150px;
+    }
+
+    p {
+      font-size: 18px;
+      margin-left: 5px;
+    }
+
+    h1 {
+      font-size: 15px;
+    }
+
+    #skills {
+      font-size: 18px;
+    }
+
+    .resume {
+      border-radius: 50px;
+    }
+  }
+  .section-title {
+       
+       text-align: center;
+       text-transform: uppercase;
+      color: rgb(105, 152, 170);
+    }
+
+    .section-title::after {
+      content: '';
+      margin: 0.3em auto 0 auto;
+      display: block;
+      width: 1.5em;
+      border-bottom: 0.2em solid #FC6D6D;
+    }
+</style>
+
+<body>
+  {% include "navbar.html" %}
+
+  {% block content %}
+
+  <section id="project" class="project">
+    <h2 class="section-title">About</h2>
+    </section>
+  <br><br>
+  <div class="flex-cont">
+    <img src="{%static 'images/aryan.jpeg' %}" alt="">
+    <p>My name is Aryan Khandelwal and i am a self-taught web developer. <br>
+      I am currenty pursuing Btech from IT branch.<br>
+      I'm a web developer from in Rajasthan, India<br>
+      MY focus is on the Django, but still exploring other technologies and frameworks
+      that catch my interest if you're looking for a developer to add to your team, I'd love to hear from you<br>
+      Full stack developer with primary focus on Django. Click here to see my resume: <a
+        href="{% static 'Resume.pdf' %}" target="_blank"
+        style="text-decoration: none;color: #fcd462;">Download Resume</a>
+
+    </p>
+  </div>
+  <!-- <button class="resume">
+    <a href="{% static 'Resume.pdf' %}" target="_blank"
+      style="text-decoration: none;color: rgb(203, 224, 224);">Resume</a>
+  </button> -->
+  <section id="project" class="project">
+    <h2 class="section-title">Expertise</h2>
+    </section>
+  <div id="skills">
+
+    <ul>
+      <li>Python</li>
+      <li>Django</li>
+      <li>HTML/CSS</li>
+      <li>Bootstrap</li>
+      <li>Tailwind css</li>
+    </ul>
+    <ul>
+      <li>Data Structures and Algorithm</li>
+      <li>C</li>
+      <li>C++</li>
+      <li>MySQL</li>
+
+    </ul>
+    </ul>
+  </div>
+</body>
+{% endblock %}
+{% include "footer.html" %}
+
+</html>

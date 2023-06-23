@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel&display=swap" rel="stylesheet">
+
+  <title>My first portfolio</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0%;
+      padding: 0%;
+    }
+
+    .wrapper {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      /* min-height: 100vh; */
+      /* background: #343F4F; */
+    }
+
+    .wrapper .static-txt {
+      color: #fff;
+      font-size: 60px;
+      font-weight: 400;
+    }
+
+    .wrapper .dynamic-txts {
+      margin-left: 15px;
+      height: 90px;
+      line-height: 90px;
+      overflow: hidden;
+    }
+
+    .dynamic-txts li {
+      list-style: none;
+      color: #FC6D6D;
+      font-size: 60px;
+      font-weight: 500;
+      position: relative;
+      top: 0;
+      animation: slide 12s steps(4) infinite;
+    }
+
+    @keyframes slide {
+      100% {
+        top: -360px;
+      }
+    }
+
+    .dynamic-txts li span {
+      position: relative;
+      margin: 5px 0;
+      line-height: 90px;
+    }
+
+    .dynamic-txts li span::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      height: 116%;
+      width: 100%;
+      background: #0D0D0D;
+      border-left: 2px solid #FC6D6D;
+      animation: typing 3s steps(10) infinite;
+    }
+
+    @keyframes typing {
+
+      40%,
+      60% {
+        left: calc(100% + 30px);
+      }
+
+      100% {
+        left: 0;
+      }
+    }
+
+    .ani {
+
+      position: relative;
+      animation: myfirst 9s;
+      animation-direction: alternative;
+
+    }
+
+    #fit {
+      text-align: center;
+      color: white;
+      font-size: 2.3em;
+      margin-top: 143px;
+      /* font-family: 'Gwendolyn', cursive; */
+
+    }
+
+    #special {
+      font-family: 'Gwendolyn', serif;
+      color: rgb(203, 224, 224);
+      font-size: 2.5em;
+    }
+
+    span {
+
+      font-family: "Poppins", sans-serif;
+    }
+
+    @keyframes myfirst {
+      0% {
+        left: 400px;
+        top: 0px;
+      }
+
+      25% {
+        left: 0px;
+        top: 0px;
+      }
+
+    }
+
+    .gui {
+      display: grid;
+      justify-content: center;
+      margin: auto;
+
+    }
+
+    .flex-container {
+      display: flex;
+      justify-content: center;
+
+      margin-top: 30px;
+    }
+  
+
+
+    /* .flex-container>div {
+
+      margin-left: 10px;
+      margin-top: 25px;
+      padding: 20px;
+      font-size: 30px;
+    } */
+
+    img {
+      height: 50px;
+      border-radius: 28%;
+      margin-left: 36px;
+    }
+
+    a>img:hover {
+      height: 52px;
+    }
+
+    /* .jumbotron {
+      background-color: rgba(8, 13, 14, 0.856);
+      width: 40%;
+      border: 1px solid;
+      border-radius: 16%;
+       display: grid;
+      grid-template-columns: auto auto; 
+      overflow: auto;
+      text-align: right;
+      margin: auto;
+
+    } */
+    .jumbotron2 {
+      background-color: rgba(0, 0, 0, 0.856);
+      width: 99%;
+      border: 1px solid;
+
+      display: grid;
+      grid-template-columns: auto auto;
+      overflow: auto;
+
+
+    }
+
+    .jumbotron h3 {
+      font-family: 'Gwendolyn', serif;
+      color: #ffffff;
+      align-items: center;
+      text-align: center;
+      font-size: 2.8em;
+    }
+
+    .jumbotron2 h3 {
+      font-family: 'Gwendolyn', serif;
+      color: #ffffff;
+      align-items: center;
+      text-align: center;
+      font-size: 2.8em;
+    }
+    @media only screen and (-webkit-min-device-pixel-ratio: 2),
+                    only screen and (min--moz-device-pixel-ratio: 2),
+                    only screen and (-o-min-device-pixel-ratio: 2/1),
+                    only screen and (min-device-pixel-ratio: 2)
+{  
+  .static-txt{
+    margin-left: 41px;
+  }
+ }
+
+
+  </style>
+</head>
+{% include "navbar.html" %}
+
+<body>
+  {% block content %}
+
+		
+  
+  <div class="gui">
+    <p id="fit"> <span id="special">Myself Aryan </span>
+    <div class="ani">
+      <div class="wrapper">
+        <div class="static-txt">I'm a</div>
+        <ul class="dynamic-txts">
+          <li><span>YouTuber</span></li>
+          <li><span>Designer</span></li>
+          <li><span>Developer</span></li>
+          <li><span>Freelancer</span></li>
+        </ul>
+      </div>
+
+
+      </p>
+
+    </div>
+    <br>
+    <div class="flex-container">
+      <a href="https://github.com/aryankhanelwal" target="_blank"><img
+          src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/91/Octicons-mark-github.svg/2048px-Octicons-mark-github.svg.png"></a>
+      <a href="https://www.linkedin.com/in/aryan-khandelwal-897b241b9/" target="_blank"><img
+          src="https://1000logos.net/wp-content/uploads/2017/03/Linkedin-Logo.png"></a>
+      <a href="https://twitter.com/aryan_aryyyan" target="_blank"><img
+          src="https://help.twitter.com/content/dam/help-twitter/brand/logo.png"></a>
+      <a href="https://github.com/aryankhanelwal" target="_blank"><img
+          src="https://upload.wikimedia.org/wikipedia/en/thumb/7/7b/Codechef%28new%29_logo.svg/1200px-Codechef%28new%29_logo.svg.png"></a>
+
+    </div>
+  </div>
+  
+  <!--Youtube-->
+  <!-- <div class="jumbotron">
+    <h3>My Youtube</h3>
+
+    
+<h3><iframe  width="424" height="238" src="https://www.youtube.com/embed/XyX7aPrU4DI"
+        title="Despacito - Luis Fonsi, Daddy Yankee ft. Justin Bieber - Electric Guitar Cover      By : Aryan"
+        frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        allowfullscreen></iframe></h3>
+  </div> -->
+  <!--Twitter-->
+  <!-- <br>
+  <br>
+  <br>
+  <div class="jumbotron2">
+
+    <div class="f">
+      <h3>
+        <blockquote class="twitter-tweet">
+          <p lang="en" dir="ltr">“Be active! Take on responsibility! Work for the things you believe in. If you do not,
+            you are surrendering your fate to others.” - Dr. APJ Abdul Kalam</p>&mdash; Aryan khandelwal
+          (@aryan_aryyyan)
+          <a href="https://twitter.com/aryan_aryyyan/status/1472486393213452289?ref_src=twsrc%5Etfw">December 19,
+            2021</a>
+        </blockquote>
+        <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+
+      </h3>
+    </div>
+    <div class="s">
+      <h3>More about me </h3>
+      <h4>
+        I build new projects just to tickle my brain and love teaching others how they're made.<br>
+
+
+      </h4>
+    </div>
+  </div> --><br><br><br><br><br><br><br><br><br><br><br><br><br>
+</body>
+{% endblock %}
+{% include "footer.html" %}
+</html>

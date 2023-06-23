@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+{% load static%}
+
+<head>
+
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="apple-touch-icon" sizes="180x180" href="{%static '../static/images/favicon-16x16.png'%}">
+  <link rel="icon" type="image/png" sizes="32x32" href="{%static '../static/images/favicon.ico'%}">
+  <link rel="manifest" href="{%static '../static/images/site.webmanifest'%}">
+  <title>Blog</title>
+</head>
+
+<body>
+  {% include 'base.html' %}
+
+  {% block content %}
+
+  <div class="container">
+    <div class="row">
+      <div class="col-md-8 card mb-4  mt-3 left  top">
+        <div class="card-body" style="background-color: #F2F4F3;">
+          {% if post.Img %}
+          <img src="{{ post.Img.url }}" style="height: 154px; display: grid; margin: auto;">
+          {% endif %}
+          <h1>{% block title %} {{ post.title |capfirst}} {% endblock title %}</h1>
+          <p class=" text-muted">{{ post.author }} <br> {{ post.created_on }}</p>
+          <p class="card-text ">{{ post.content | safe }}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  {% endblock content %}
+<br><br><br><br><br><br><br><br><br><br>
+</body>
+{% include "footer.html" %}
+
+</html>

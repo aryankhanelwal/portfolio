@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <style>
+        /* footer section start */
+    .footer{
+        background: #000000; 
+        width: 100%; 
+        color:#fff; 
+        
+        padding: 1%;
+        display: inline-block;}
+
+a.footerlogo {
+    color:#fff; 
+    width: 15%;
+float:left; 
+padding: 1% 1% 1% 1%; 
+text-decoration: none; 
+margin: 0% 5% 0% 0%;}
+
+img.icon {
+    width:25px; 
+    float:left; 
+    height:25px; 
+    margin: 7px; 
+    position: relative;
+}
+
+.testo_disclaimer {
+    color:white; 
+    padding: 0; 
+    font-size: 20px; 
+    text-align: left; 
+    width: 100%;}
+
+.disclaimer {
+    text-align:center;
+}
+
+.icon:hover {
+    opacity: 0.5;
+    height: 30px;
+}
+.copy-right-sec{
+  padding: 1.8rem;
+    background: #000000;
+    color: #fff;
+    text-align: center;
+}
+.copy-right-sec a{
+  color: #fcd462;
+    font-weight: 500;
+}
+a{
+  text-decoration:none;
+}
+
+@media (max-width: 500px) {
+  .testo_disclaimer{
+    display: none;
+  }
+.icone_social_footer{
+  display: none;
+}
+.copy-right-sec{
+  font-size: 10px;
+}
+}
+
+
+/* footer section end */
+    </style>
+</head>
+<body>
+    {% block content %}
+
+		
+ {% endblock %}
+    	<!-- footer section start -->
+		<footer class="footer">
+
+            <a class="footerlogo">Build with Django</a>
+          
+            <section class="icone_social_footer">
+          
+              <a href="#" target="_blank">
+                <img src="https://pnggrid.com/wp-content/uploads/2021/07/Facebook-Logo-Square-768x768.png" class="icon"></a>
+          
+              <a href="https://www.instagram.com/02aryyyan02/" target="_blank">
+                <img src="https://www.comune.foggia.it/wp-content/uploads/2021/04/instagram-logo-png.png" class="icon"></a>
+          
+               <a href="#" target="_blank">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/82/Telegram_logo.svg/480px-Telegram_logo.svg.png" class="icon"></a>
+              
+                  <a href="#" target="_blank">
+                <img src="https://www.espronceda.net/wp-content/uploads/2021/12/format-twitter-logo-transparent-11549680770lolovrdq8m.png" class="icon"></a>
+          
+            </section>
+          
+            <section class="disclaimer">
+              <i class="testo_disclaimer">"You are never too <br>old to set another goal or to dream a new dream."</i>
+            </section>
+            <section id="copy-right">
+                <div class="copy-right-sec"><i class="fa fa-copyright"></i>  
+                   2022 Powerd By <a href="#">Aryan Khandelwal</a> 
+          
+          
+                </div>
+          
+              </section>
+          
+          </footer>
+          
+		<!-- footer copy right section end -->
+</body>
+</html>

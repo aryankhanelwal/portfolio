@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+    {% load static%}
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="apple-touch-icon" sizes="180x180" href="{%static '../static/images/favicon-16x16.png'%}">
+    <link rel="icon" type="image/png" sizes="32x32" href="{%static '../static/images/favicon.ico'%}">
+    <link rel="manifest" href="{%static '../static/images/site.webmanifest'%}">
+    <title>Blog</title>
+    <style>
+        body {
+            font-family: "Roboto", sans-serif;
+            font-size: 18px;
+            /* background-color: #2C3333; */
+
+        }
+
+ 
+    </style>
+</head>
+
+{% include "base.html" %}
+<body>
+
+
+
+
+    {% block content %}
+
+
+    <!-- <header class="masthead">
+        <div class="overlay"></div>
+        <div class="container">
+            <div class="row">
+                <div class=" col-md-8 col-md-10 mx-auto">
+                    <div class="site-heading">
+                        <h3 class=" site-heading my-4 mt-3 " style="color: #A9927D; margin-left: 400px;"> WELCOME </h3>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header> -->
+    <div class="container">
+        <div class="row" id="blog_cont">
+            <!-- Blog Entries Column -->
+            <div class="col-md-8 mt-3 left">
+                {% for post in posts %}
+                <div class="card mb-4">
+                    <div class="card-body " style="background-color: rgba(8, 13, 14, 0.856); color: white;">
+                        <!-- {% if post.Img %}
+                        <img src="{{ post.Img.url }}" style="height: 154px; display: grid; margin: auto;">
+                        {% endif %} -->
+                        <h2 class="card-title">{{ post.title|capfirst }}</h2>
+                        <p class="card-text text-muted h6">{{ post.author }} | {{ post.created_on}} </p>
+                        <p class="card-text">{{post.content|slice:":200" }}...</p>
+                        <a href="/{{post.slug}}" class="btn btn-primary">Read More </a>
+
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+    {% endblock content %}
+<br><br><br><br><br><br><br>
+</body>
+{% include "footer.html" %}
+
+</html>
