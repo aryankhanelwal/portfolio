@@ -17,15 +17,12 @@
 <style>
 body{
     margin: 0;
-   
-  width: 100%;
-   height: 100%;
-
+    width: 100%;
+    height: 100%;
 }
 * {box-sizing: border-box}
 form{
     color: white;
-   
 }
 input[type=email]:focus, input[type=password]:focus {
   background-color: #ddd;
@@ -47,7 +44,7 @@ input[type=text], input[type=password],input[type=email] {
     justify-content: center;
     align-content: center;
     border-radius: 51px;
-    background-color: #b8393969;
+    background-color: ;
     margin: 40px 400px;
     
 }
@@ -66,17 +63,13 @@ button:hover {
 }
 h1{
   text-align: center;
-  color: rgb(105, 152, 170);
-  animation: jump 5s ;
-  animation-direction: alternate;
+  color: white !important;
   position: relative;
   font-family: 'Kanit', sans-serif;
+  color: #04AA6D;
+}
 
-}
-@keyframes jump {
-  0%   { opacity: 0;
-  }
-}
+
 .back{
 height: 79px;
 display: block;
@@ -87,34 +80,28 @@ textarea{
   background-color: #f1f1f1;
   width: 100%;
 }
-@media (max-width: 500px) 
-   { 
- 
-  input[type=text], input[type=password],input[type=email] {
-    width: 70%;
-    display: flex;
-    align-content: center;
-    justify-content: center;
-padding-left: 15px;
-  }
-  p{
-    padding-left: 66px;
-  }
-  textarea{
-    width:70% ;
-  }
-  button{
-    width: 30%;
-    margin-left: 122px;
-  }
-    }
+.section-title {
+       
+  text-align: center;
+  text-transform: uppercase;
+ color: rgb(105, 152, 170);
+}
 
-
-
+.section-title::after {
+ content: '';
+ margin: 0.3em auto 0 auto;
+ display: block;
+ width: 3em;
+ border-bottom: 0.2em solid #FC6D6D;
+}
     </style>
 <body>
     {% include "navbar.html" %}
-    <h1><i>Feel free to reach me </i></h1>
+    {% block content %}
+
+    <section id="project" class="project">
+      <h2 class="section-title">Feel free to contact me</h2>
+      </section>
     <div class="container">
       <img src="{%static 'images/back.png'%}" class="back">
         <form  method="POST" autocomplete="off">
@@ -127,5 +114,7 @@ padding-left: 15px;
         </div>
         <br><br><br><br><br><br><br><br><br><br>
 </body>
+{% endblock %}
+
 {% include "footer.html" %}
 </html>

@@ -15,7 +15,7 @@ class contact_me(models.Model):
 
     def __str__(self):
 
-        return self.name+"|"+str(self.email)+"|"+self.subject+"|"+ self.company+"|"+ self.project_Summary
+        return self.name+"|"+str(self.email)+"|"+self.subject+"|"+ self.company+"|"+ str(self.project_Summary)
 
 STATUS = (
     (0,"Draft"),
